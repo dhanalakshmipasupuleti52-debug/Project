@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stack</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+body{
+min-height:100vh;
+padding:30px;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+.container{
+max-width:1100px;
+margin:auto;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+h1{text-align:center;color:#00e5ff;margin-bottom:25px;}
+h2{margin:20px 0 10px;color:#ffd54f;}
+p,li{line-height:1.8;}
+ul{padding-left:25px;}
+table{width:100%;border-collapse:collapse;margin-top:20px;}
+th,td{border:1px solid rgba(255,255,255,0.3);padding:12px;text-align:center;}
+th{background:#00bcd4;}
+footer{text-align:center;margin-top:30px;}
+.home-btn{
+padding:12px 28px;
+background:#00bcd4;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>STACK</h1>
+
+<h2>About Stack</h2>
+<p>
+A Stack is a linear data structure that follows the LIFO
+(Last In First Out) principle.
+The last element inserted is removed first.
+</p>
+
+<h2>Applications</h2>
+<ul>
+<li>Undo operations</li>
+<li>Function call management</li>
+<li>Expression evaluation</li>
+<li>Browser navigation</li>
+<li>Recursion handling</li>
+</ul>
+
+<h2>Advantages</h2>
+<ul>
+<li>Simple implementation</li>
+<li>Fast insertion</li>
+<li>Fast deletion</li>
+<li>Efficient memory usage</li>
+</ul>
+
+<h2>Disadvantages</h2>
+<ul>
+<li>Limited access</li>
+<li>Only top element accessible</li>
+<li>Not suitable for random access</li>
+</ul>
+
+<h2>Time Complexity</h2>
+
+<table>
+<tr>
+<th>Operation</th>
+<th>Complexity</th>
+</tr>
+<tr>
+<td>Push</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Pop</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Peek</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>O(n)</td>
+</tr>
+</table>
+
+<footer>
+<a href="index.html" class="home-btn">🏠 Home Page</a>
+</footer>
+
+</div>
+</body>
+</html>
