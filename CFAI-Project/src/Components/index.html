@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DSA Complexity Comparison</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            padding:20px;
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        table{
+            width:80%;
+            margin:auto;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th{
+            background:#007bff;
+            color:white;
+            padding:10px;
+        }
+
+        td{
+            border:1px solid #ddd;
+            padding:10px;
+            text-align:center;
+        }
+
+        .good{
+            color:green;
+            font-weight:bold;
+        }
+
+        .avg{
+            color:red;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Linked List vs Stack vs Queue</h1>
+
+<table id="comparisonTable">
+    <tr>
+        <th>Operation</th>
+        <th>Linked List</th>
+        <th>Stack</th>
+        <th>Queue</th>
+    </tr>
+</table>
+
+<script>
+const operations = [
+    ["Insert","O(1)","O(1)","O(1)"],
+    ["Delete","O(1)","O(1)","O(1)"],
+    ["Search","O(n)","O(n)","O(n)"],
+    ["Access","O(n)","O(n)","O(n)"],
+    ["Space","O(n)","O(n)","O(n)"]
+];
+
+const table = document.getElementById("comparisonTable");
+
+operations.forEach(op => {
+    let row = table.insertRow();
+
+    op.forEach(value => {
+        let cell = row.insertCell();
+
+        if(value === "O(1)")
+            cell.innerHTML = `<span class="good">${value}</span>`;
+        else if(value === "O(n)")
+            cell.innerHTML = `<span class="avg">${value}</span>`;
+        else
+            cell.textContent = value;
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexity Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <span class="logo-icon">🧠</span>
+        <span class="logo-text">SmartDSA</span>
+    </div>
+</nav>
+
+<div style="padding:40px; max-width:1200px; margin:auto;">
+
+    <h1 style="text-align:center;">
+        📈 Time & Space Complexity Comparison
+    </h1>
+
+    <br><br>
+
+    <table border="1" cellpadding="12" cellspacing="0" width="100%">
+
+        <tr>
+            <th>Operation</th>
+            <th>Array</th>
+            <th>Linked List</th>
+            <th>Stack</th>
+            <th>Queue</th>
+        </tr>
+
+        <tr>
+            <td><b>Access</b></td>
+            <td>O(1)</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+        </tr>
+
+        <tr>
+            <td><b>Search</b></td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+        </tr>
+
+        <tr>
+            <td><b>Insertion</b></td>
+            <td>O(n)</td>
+            <td>O(1)</td>
+            <td>O(1) (Push)</td>
+            <td>O(1) (Enqueue)</td>
+        </tr>
+
+        <tr>
+            <td><b>Deletion</b></td>
+            <td>O(n)</td>
+            <td>O(1)</td>
+            <td>O(1) (Pop)</td>
+            <td>O(1) (Dequeue)</td>
+        </tr>
+
+        <tr>
+            <td><b>Peek / Front</b></td>
+            <td>O(1)</td>
+            <td>O(n)</td>
+            <td>O(1)</td>
+            <td>O(1)</td>
+        </tr>
+
+        <tr>
+            <td><b>Space Complexity</b></td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+            <td>O(n)</td>
+        </tr>
+
+    </table>
+
+    <br><br>
+
+    <h2>Key Observations</h2>
+
+    <ul>
+        <li>Arrays provide the fastest random access (O(1)).</li>
+        <li>Linked Lists provide efficient insertion and deletion (O(1)).</li>
+        <li>Stacks are ideal for LIFO operations.</li>
+        <li>Queues are ideal for FIFO operations.</li>
+        <li>All structures require O(n) space.</li>
+    </ul>
+
+    <br>
+
+    <a href="index.html" class="btn">⬅ Back to Home</a>
+<div class="container">
+
+    <h1>📈 Time & Space Complexity Comparison</h1>
+
+    <!-- Table Here -->
+
+    <div class="observations">
+        <h2>Key Observations</h2>
+        <ul>
+            <li>Arrays provide O(1) access.</li>
+            <li>Linked Lists provide O(1) insertion and deletion.</li>
+            <li>Stacks follow LIFO.</li>
+            <li>Queues follow FIFO.</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="btn">
+        ⬅ Back to Home
+    </a>
+
+</div>
+</div>
+
+<footer>
+    <p>© 2025 SmartDSA | Learn Data Structures Easily 🚀</p>
+</footer>
+
+</body>
+</html>
