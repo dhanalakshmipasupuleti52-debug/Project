@@ -17,10 +17,10 @@
         html {
             scroll-behavior: smooth;
         }
- 
-        body {
-            background: #f4f7fc;
-        }
+ body{
+    background:#0f172a;
+    color:white;
+}
  
         /* ── NAVBAR ── */
         nav {
@@ -77,18 +77,6 @@
             color: #ffd700;
         }
  
-        /* ── HERO ── */
-        /*
-            YOUR IMAGE: CFAI.png
-            ─────────────────────────────────────────────────────────
-            This file (index.html) is inside:  stacks/index.html
-            Your image (CFAI.png) is inside:   CFAI-Project/CFAI.png
- 
-            So the path from stacks/ up to root is:  ../CFAI.png
-            ─────────────────────────────────────────────────────────
-            If this index.html is in ROOT (same folder as CFAI.png):
-            change url("../CFAI.png")  →  url("CFAI.png")
-        */
        .hero{
     height: 100vh;
     width: 100%;
@@ -201,7 +189,7 @@
  
         .section-heading h2 {
             font-size: 30px;
-            color: #222;
+            color: #2851af;
             margin-bottom: 10px;
         }
  
@@ -215,23 +203,22 @@
         .heading-bar {
             width: 50px;
             height: 4px;
-            background: #0077ff;
+            background: #0c1014;
             border-radius: 2px;
             margin: 14px auto 0;
         }
  
         /* ── CARDS ── */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            padding: 40px 60px 60px;
-            max-width: 1100px;
-            margin: auto;
-        }
+      .cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    padding:40px 60px;
+    transition:0.3s;
+}
  
         .card {
-            background: white;
+            background: #111827;
             padding: 32px;
             border-radius: 14px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
@@ -240,12 +227,11 @@
             border: 1px solid #eee;
         }
  
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(0,119,255,0.15);
-            border-color: #0077ff;
-        }
- 
+        .card:hover{
+    transform:translateY(-8px);
+    border-color:#38bdf8;
+    box-shadow:0 10px 25px rgba(56,189,248,0.3);
+}
         .card:last-child {
             grid-column: 1 / span 2;
             max-width: 560px;
@@ -257,37 +243,26 @@
             font-size: 46px;
             margin-bottom: 14px;
         }
- 
-        .card h2 {
-            color: #0077ff;
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
- 
-        .card p {
-            font-size: 15px;
-            margin-bottom: 22px;
-            color: #666;
-            line-height: 1.6;
-        }
- 
-        .card a {
-            display: inline-block;
-            padding: 10px 24px;
-            background: #0077ff;
-            color: white;
-            text-decoration: none;
-            border-radius: 7px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
- 
-        .card a:hover {
-            background: #005fd1;
-            transform: translateY(-1px);
-        }
- 
+ .card h2{
+    color:#38bdf8;
+}
+
+.card p{
+    color:#d1d5db;
+}
+.card a{
+    display:inline-block;
+    padding:10px 24px;
+    background:#0077ff;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.card a:hover{
+    background:#005fd1;
+}
         /* ── COMPLEXITY TABLE ── */
         .complexity-section {
             background: #1a1a2e;
@@ -296,7 +271,7 @@
  
         .complexity-section h2 {
             text-align: center;
-            color: white;
+            color: rgb(178, 173, 173);
             font-size: 28px;
             margin-bottom: 8px;
         }
@@ -322,7 +297,7 @@
  
         thead tr {
             background: #0077ff;
-            color: white;
+            color: y3s'rgb(149, 142, 142);
         }
  
         thead th {
