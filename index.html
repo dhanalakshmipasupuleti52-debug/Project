@@ -89,20 +89,28 @@
             If this index.html is in ROOT (same folder as CFAI.png):
             change url("../CFAI.png")  →  url("CFAI.png")
         */
-        .hero {
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    background-color: #0a0a2e;
-    background-image: url("../cfai.png");
-    background-size: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
+       .hero{
+    height: 100vh;
+    width: 100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("cfai.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
         .hero-badge {
             background: rgba(255,255,255,0.15);
@@ -183,27 +191,6 @@
             grid-template-columns: repeat(4, 1fr);
             text-align: center;
             padding: 20px 40px;
-        }
- 
-        .stat-item {
-            border-right: 1px solid rgba(255,255,255,0.2);
-            padding: 8px 0;
-        }
- 
-        .stat-item:last-child {
-            border-right: none;
-        }
- 
-        .stat-num {
-            font-size: 26px;
-            font-weight: 800;
-            color: #ffd700;
-        }
- 
-        .stat-label {
-            font-size: 13px;
-            color: rgba(255,255,255,0.8);
-            margin-top: 2px;
         }
  
         /* ── SECTION HEADING ── */
@@ -407,16 +394,9 @@
             .hero p  { font-size: 16px; }
             .logo-text { font-size: 22px; }
  
-            .stats-bar {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0;
-            }
+           
  
-            .stat-item {
-                border-right: none;
-                border-bottom: 1px solid rgba(255,255,255,0.15);
-                padding: 12px 0;
-            }
+            
  
             .cards {
                 grid-template-columns: 1fr;
@@ -459,31 +439,10 @@
             Explore Arrays, Linked Lists, Stacks and Queues
             with interactive visualizations and simple explanations.
         </p>
-        <div class="hero-btns">
-            <a href="#cards" class="btn">🚀 Get Started</a>
-            <a href="comparison.html" class="btn-outline">📊 View Comparison</a>
-        </div>
+       <div class="hero-btns">
+    <a href="#cards" class="btn">🚀 Get Started</a>
+</div>
     </section>
- 
-    <!-- STATS BAR -->
-    <div class="stats-bar">
-        <div class="stat-item">
-            <div class="stat-num">4</div>
-            <div class="stat-label">Data Structures</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-num">O(1)</div>
-            <div class="stat-label">Best Insert Time</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-num">O(n)</div>
-            <div class="stat-label">Space Complexity</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-num">100%</div>
-            <div class="stat-label">Free to Learn</div>
-        </div>
-    </div>
  
     <!-- SECTION HEADING -->
     <div class="section-heading" id="cards">
@@ -531,62 +490,7 @@
         </div>
  
     </section>
- 
-    <!-- COMPLEXITY TABLE -->
-    <div class="complexity-section">
-        <h2>⚡ Quick Complexity Reference</h2>
-        <p class="sub">Time &amp; Space complexity of all data structures at a glance</p>
-        <div class="table-wrap">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Data Structure</th>
-                        <th>Access</th>
-                        <th>Search</th>
-                        <th>Insert</th>
-                        <th>Delete</th>
-                        <th>Space</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Array</strong></td>
-                        <td class="good">O(1)</td>
-                        <td class="bad">O(n)</td>
-                        <td class="bad">O(n)</td>
-                        <td class="bad">O(n)</td>
-                        <td class="bad">O(n)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Linked List</strong></td>
-                        <td class="bad">O(n)</td>
-                        <td class="bad">O(n)</td>
-                        <td class="good">O(1)</td>
-                        <td class="good">O(1)</td>
-                        <td class="bad">O(n)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Stack</strong></td>
-                        <td class="bad">O(n)</td>
-                        <td class="bad">O(n)</td>
-                        <td class="good">O(1)</td>
-                        <td class="good">O(1)</td>
-                        <td class="bad">O(n)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Queue</strong></td>
-                        <td class="bad">O(n)</td>
-                        <td class="bad">O(n)</td>
-                        <td class="good">O(1)</td>
-                        <td class="good">O(1)</td>
-                        <td class="bad">O(n)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="cmp-btn">
-            <a href="comparison.html">View Full Comparison →</a>
-        </div>
+
     </div>
  
     <!-- FOOTER -->
