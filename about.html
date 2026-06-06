@@ -3,315 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Comparison of Data Structures</title>
+<title>About SmartDSA</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
+    background:#0f172a;
     min-height:100vh;
-    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
-    padding:40px 20px;
 }
 
-h1{
-    text-align:center;
+/* Navbar */
+nav{
+    background:#111827;
+    padding:15px 40px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.4);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon{
+    font-size:38px;
+}
+
+.logo-text{
+    font-size:32px;
+    font-weight:800;
     color:white;
-    margin-bottom:50px;
-    font-size:40px;
-    text-shadow:2px 2px 15px rgba(0,0,0,0.5);
-    animation:slideDown 1s ease;
 }
 
-/* 2 Cards Top & 2 Cards Bottom */
-.container{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-    max-width:750px;
-    margin:auto;
-    justify-items:center;
-}
-
-/* Smaller Cards */
-.card{
-    width:320px;
-    height:340px;
-    border-radius:20px;
-    overflow:hidden;
-    position:relative;
-    color:white;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    transition:all 0.5s ease;
-    animation:fadeIn 1.5s ease;
-    backdrop-filter:blur(8px);
-    border:1px solid rgba(255,255,255,0.15);
-}
-
-.card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-size:cover;
-    background-position:center;
-    filter:brightness(0.30);
-    z-index:1;
-}
-
-/* Different Background Images */
-
-/* Array */
-.array::before{
-    background-image:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80');
-}
-
-/* Linked List */
-.linkedlist::before{
-    background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80');
-}
-
-/* Stack */
-.stack::before{
-    background-image:url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80');
-}
-
-/* Queue */
-.queue::before{
-    background-image:url('https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80');
-}
-
-.content{
-    position:relative;
-    z-index:2;
-    padding:20px;
-}
-
-.card h2{
-    text-align:center;
-    margin-bottom:15px;
-    font-size:24px;
-}
-
-.card p{
-    font-size:14px;
-    line-height:1.6;
-    text-align:justify;
-}
-
-.card:hover{
-    transform:translateY(-12px) scale(1.04);
-    box-shadow:0 20px 40px rgba(255,255,255,0.25);
-}
-
-/* Comparison Table */
-.compare-table{
-    margin-top:70px;
-    overflow-x:auto;
-}
-
-table{
-    width:95%;
-    margin:auto;
-    border-collapse:collapse;
-    background:white;
+/* About Container */
+.about-container{
+    max-width:900px;
+    margin:50px auto;
+    background:#111827;
+    padding:40px;
     border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    border:1px solid #374151;
 }
 
-th{
-    background:#2563eb;
-    color:white;
-    padding:15px;
-    font-size:16px;
-}
-
-td{
-    padding:15px;
+.about-container h1{
     text-align:center;
+    color:#0077ff;
+    margin-bottom:20px;
 }
 
-tr:nth-child(even){
-    background:#f1f5f9;
+.about-container p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:20px;
 }
 
-tr:hover{
-    background:#dbeafe;
+.about-container h2{
+    color:#0077ff;
+    margin:20px 0 10px;
+}
+
+.about-container ul{
+    padding-left:25px;
+}
+
+.about-container li{
+    margin-bottom:10px;
+    font-size:17px;
+    color:#555;
+}
+
+/* Button */
+.btn{
+    display:inline;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#3e76b7;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
     transition:0.3s;
 }
 
-/* Animations */
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.btn:hover{
+    background:#005fd1;
 }
 
-@keyframes slideDown{
-    from{
-        opacity:0;
-        transform:translateY(-50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+/* Footer */
+footer{
+    margin-top:40px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
-/* Responsive */
+/* Mobile */
 @media(max-width:768px){
 
-    .container{
-        grid-template-columns:1fr;
+    .about-container{
+        margin:20px;
+        padding:25px;
     }
 
-    .card{
-        width:100%;
-        max-width:320px;
+    .about-container h1{
+        font-size:30px;
     }
 
-    h1{
-        font-size:28px;
+    .logo-text{
+        font-size:24px;
+    }
+
+    .logo-icon{
+        font-size:30px;
     }
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<h1>Comparison Between Array, Linked List, Stack and Queue</h1>
-
-<div class="container">
-
-    <!-- Array -->
-    <div class="card array">
-        <div class="content">
-            <h2>Array</h2>
-            <p>
-                An Array is a linear data structure that stores elements
-                in contiguous memory locations. Elements are accessed using
-                indexes, making retrieval fast and efficient. Arrays are
-                widely used to manage collections of similar data.
-            </p>
-        </div>
+<nav>
+    <div class="logo">
+        <span class="logo-icon">🧠</span>
+        <span class="logo-text">SmartDSA</span>
     </div>
+</nav>
 
-    <!-- Linked List -->
-    <div class="card linkedlist">
-        <div class="content">
-            <h2>Linked List</h2>
-            <p>
-                A Linked List consists of nodes connected through pointers.
-                Each node stores data and the address of the next node.
-                It allows easy insertion and deletion without shifting
-                other elements in memory.
-            </p>
-        </div>
-    </div>
+<div class="about-container">
 
-    <!-- Stack -->
-    <div class="card stack">
-        <div class="content">
-            <h2>Stack</h2>
-            <p>
-                A Stack follows the LIFO (Last In First Out) principle.
-                The most recently added element is removed first.
-                Common operations include Push, Pop, and Peek.
-                It is used in recursion and undo functionality.
-            </p>
-        </div>
-    </div>
+    <h1>About SmartDSA</h1>
 
-    <!-- Queue -->
-    <div class="card queue">
-        <div class="content">
-            <h2>Queue</h2>
-            <p>
-                A Queue follows the FIFO (First In First Out) principle.
-                The first inserted element is removed first.
-                Queues are commonly used in scheduling systems,
-                buffering, and task management applications.
-            </p>
-        </div>
-    </div>
+    <p>
+        SmartDSA is an educational platform designed to help students learn
+        and understand the fundamentals of Data Structures and Algorithms
+        in a simple and interactive way.
+    </p>
+
+    <p>
+        Our goal is to make learning easier by providing clear explanations,
+        examples, comparisons, and complexity analysis of popular data structures.
+    </p>
+
+    <h2>Topics Covered</h2>
+
+    <ul>
+        <li>📊 Arrays</li>
+        <li>🔗 Linked Lists</li>
+        <li>📚 Stacks</li>
+        <li>🚶 Queues</li>
+        <li>📈 Time & Space Complexity</li>
+    </ul>
+
+    <h2>Why SmartDSA?</h2>
+
+    <ul>
+        <li>Easy-to-understand explanations.</li>
+        <li>Clean and responsive design.</li>
+        <li>Complexity comparison tables.</li>
+        <li>Beginner-friendly learning experience.</li>
+    </ul>
+
+    <a href="index.html" class="btn">⬅ Back to Home</a>
 
 </div>
 
-<!-- Comparison Table -->
-<div class="compare-table">
-
-<table>
-    <tr>
-        <th>Feature</th>
-        <th>Array</th>
-        <th>Linked List</th>
-        <th>Stack</th>
-        <th>Queue</th>
-    </tr>
-
-    <tr>
-        <td>Structure</td>
-        <td>Contiguous Memory</td>
-        <td>Nodes Connected by Links</td>
-        <td>Linear</td>
-        <td>Linear</td>
-    </tr>
-
-    <tr>
-        <td>Working Principle</td>
-        <td>Indexed Access</td>
-        <td>Sequential Linking</td>
-        <td>LIFO</td>
-        <td>FIFO</td>
-    </tr>
-
-    <tr>
-        <td>Insertion</td>
-        <td>Fixed Position</td>
-        <td>Anywhere</td>
-        <td>Top Only</td>
-        <td>Rear End</td>
-    </tr>
-
-    <tr>
-        <td>Deletion</td>
-        <td>Requires Shifting</td>
-        <td>Anywhere</td>
-        <td>Top Only</td>
-        <td>Front End</td>
-    </tr>
-
-    <tr>
-        <td>Memory Usage</td>
-        <td>Fixed</td>
-        <td>Dynamic</td>
-        <td>Dynamic/Static</td>
-        <td>Dynamic/Static</td>
-    </tr>
-
-    <tr>
-        <td>Applications</td>
-        <td>Data Storage</td>
-        <td>Memory Management</td>
-        <td>Undo, Recursion</td>
-        <td>Scheduling, Buffering</td>
-    </tr>
-</table>
-
-</div>
+<footer>
+    <p>© 2025 SmartDSA | Learn Data Structures Easily 🚀</p>
+</footer>
 
 </body>
 </html>
